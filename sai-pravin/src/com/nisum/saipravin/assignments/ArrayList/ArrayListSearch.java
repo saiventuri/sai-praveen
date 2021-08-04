@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
- * @author sai praveen
  * Problem Statement : Write a program to find an element in a array list.
- *
+ * @author sai praveen
+ * 
  */
 
 public class ArrayListSearch {
@@ -15,7 +14,7 @@ public class ArrayListSearch {
 	public static void main(String[] args) {
 		
 		/* Initialize the Array List */
-		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<>();
 		
 		/* Adding Elements to the ArrayList */
 		list.add(4);
@@ -33,10 +32,8 @@ public class ArrayListSearch {
 		System.out.println(list);
 		
 		/* Searching an element 7 in the Array List */
-		int elementIndex = list.indexOf(7);
-		if(elementIndex != -1) {
-			System.out.println("Element Found: "+list.get(elementIndex));
-			System.out.println("Element is found in the list at "+ (elementIndex+1) + " position");
+		if(list.contains(7)) {
+			System.out.println("Element is found in the list at "+ (list.indexOf(7) + 1) + " position");
 		} else {
 			System.out.println("Element is not found in the list");
 		}

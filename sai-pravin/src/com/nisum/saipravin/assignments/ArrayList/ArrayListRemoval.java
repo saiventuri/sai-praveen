@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
- * @author sai praveen
  * Problem Statement: Write a program to remove the element by given index from a array list.
+ * @author sai praveen
+ * 
  */
 public class ArrayListRemoval {
 
 	public static void main(String[] args) {
 		
 		/* Initialize the Array List */
-		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<>();
 		
 		/* Adding Elements to the ArrayList */
 		list.add(4);
@@ -31,13 +31,12 @@ public class ArrayListRemoval {
 		System.out.println(list);
 		
 		/* Removing element 7 from the list */
-		if(list.remove(new Integer(7))) {
-			System.out.println("List after removal of element");
+		try {
+			System.out.println("List after removal of element "+ list.remove(7));
 			System.out.println(list);
-		} else {
-			System.out.println("Element is either not present in the list to remove or some problem in removing the element from the list");
+		} catch(UnsupportedOperationException | IndexOutOfBoundsException ex) {
+			System.out.println("Unable to delete element from the list");
 		}
-
 
 	}
 

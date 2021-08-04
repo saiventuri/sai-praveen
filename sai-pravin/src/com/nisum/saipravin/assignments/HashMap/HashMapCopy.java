@@ -4,9 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 
- * @author sai praveen
  * Problem Statement: Write a program to copy all of the elements from the one map to another map.
+ * @author sai praveen
  *
  */
 
@@ -14,7 +13,7 @@ public class HashMapCopy {
 
 	public static void main(String[] args) {
 		/* Initializing the hash map 1 */
-		Map<Integer,String> namesMap1 = new HashMap<Integer,String>();
+		Map<Integer,String> namesMap1 = new HashMap<>();
 		
 		/* Adding key-value pairs to the map */
 		namesMap1.put(1, "Sai");
@@ -27,7 +26,7 @@ public class HashMapCopy {
 		System.out.println(namesMap1);
 		
 		/* Initializing the hash map 2 */
-		Map<Integer,String> namesMap2 = new HashMap<Integer,String>();
+		Map<Integer,String> namesMap2 = new HashMap<>();
 		
 		/* Adding key-value pairs to the map 2 */
 		namesMap2.put(10, "Kamala");

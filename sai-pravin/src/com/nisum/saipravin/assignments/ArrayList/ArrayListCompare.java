@@ -4,16 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
- * @author sai praveen
  * Problem Statement: Write a program to compare two array lists
- *
+ * @author sai praveen
+ * 
  */
 public class ArrayListCompare {
 
 	public static void main(String[] args) {
 		/* Initialize the First Array List */
-		List<Integer> list1 = new ArrayList<Integer>();
+		List<Integer> list1 = new ArrayList<>();
 		
 		/* Adding Elements to the first ArrayList */
 		list1.add(4);
@@ -28,7 +27,7 @@ public class ArrayListCompare {
 		list1.add(9);
 		
 		/* Initialize the second Array List */
-		List<Integer> list2 = new ArrayList<Integer>();
+		List<Integer> list2 = new ArrayList<>();
 		
 		/* Adding Elements to the second ArrayList */
 		list2.add(4);
@@ -43,7 +42,7 @@ public class ArrayListCompare {
 		list2.add(9);
 		
 		/* Initialize the third Array List */
-		List<Integer> list3 = new ArrayList<Integer>();
+		List<Integer> list3 = new ArrayList<>();
 		
 		/* Adding Elements to the third ArrayList */
 		list3.add(14);

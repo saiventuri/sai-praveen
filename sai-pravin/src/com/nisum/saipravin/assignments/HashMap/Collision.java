@@ -5,9 +5,8 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * 
- * @author sai praveen
  * Problem Statement : Write a program for real time hash collision
+ * @author sai praveen
  *
  */
 
@@ -65,10 +64,10 @@ public class Collision {
 		return id == other.id && Objects.equals(name, other.name);
 	}
 	
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		
 		/* Initializing the Map */
-		Map<Collision,Integer> collisionMap = new HashMap<Collision,Integer>();
+		Map<Collision,Integer> collisionMap = new HashMap<>();
 		
 		/* Initializing Collision Objects to insert into the map*/
 		Collision obj1 = new Collision(1,"Sai");

@@ -2,12 +2,12 @@ package com.nisum.saipravin.assignments.ExceptionHandling;
 
 
 /**
- * 
- * @author sai praveen
  * Problem Statement : Write a program to define your own custom exception and throw it.
+ * @author sai praveen
+ * 
  */
 
-public class OwnCustomException {
+public class OwnCustomExceptionClass {
 
 	public static void main(String[] args) {
 		

@@ -1,9 +1,9 @@
 package com.nisum.saipravin.assignments.ExceptionHandling;
 
 /**
- * 
- * @author sai praveen
  * Problem Statement: Write a program to define multiple catch blocks for exception handling.
+ * @author sai praveen
+ * 
  */
 
 public class MultipleExceptions {
@@ -16,7 +16,7 @@ public class MultipleExceptions {
 			int a = 100/n;
 			
 			/* Causing ArrayIndexOutOfBounds Exception */
-			int b[] = {10,20,30};
+			int[] b = {10,20,30};
 			b[5] = 50;
 			
 		} catch(ArithmeticException e) {
