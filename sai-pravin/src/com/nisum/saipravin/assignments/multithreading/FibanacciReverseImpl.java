@@ -25,10 +25,10 @@ public class FibanacciReverseImpl {
     public static void main(String[] args) {
 
         // 1. Create a Blocking Queue
-        BlockingQueue<Integer> myQueue = new ArrayBlockingQueue<>(20);
+        BlockingQueue<Integer> commonQueue = new ArrayBlockingQueue<>(20);
         List<Integer> reverseSeries = new LinkedList<>();
 
-        // 2. Initialize the Producer Runnable which will produce fibonacci numbers and
+        // 2. Initialize the Producer Runnable which will produce fibonocci numbers and
         // insert them
         // in the blocking queue
         Runnable fibanacciProducerRunnable = () -> {
@@ -41,12 +41,12 @@ public class FibanacciReverseImpl {
 
                 LoggerUtility.logInfo("Fibanacci Series");
 
-                myQueue.put(num1);
+                commonQueue.put(num1);
                 LoggerUtility.logInfo(Integer.toString(num1));
                 int i = 20;
                 i--;
 
-                myQueue.put(num2);
+                commonQueue.put(num2);
                 LoggerUtility.logInfo(Integer.toString(num2));
                 i--;
 
@@ -57,7 +57,7 @@ public class FibanacciReverseImpl {
                     int temp = num1 + num2;
                     num1 = num2;
                     num2 = temp;
-                    myQueue.put(num2);
+                    commonQueue.put(num2);
                     LoggerUtility.logInfo(Integer.toString(num2));
                     i--;
                 }
@@ -76,7 +76,7 @@ public class FibanacciReverseImpl {
 
                 while (i <= 20) {
 
-                    Integer num = myQueue.take();
+                    Integer num = commonQueue.take();
                     reverseSeries.add(0, num);
                     Thread.sleep(100);
                     i++;

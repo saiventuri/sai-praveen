@@ -23,7 +23,7 @@ public class ProducerConsumerImpl {
     public static void main(String[] args) {
 
         // 1. Create a Blocking Queue
-        BlockingQueue<Object> myQueue = new ArrayBlockingQueue<>(20);
+        BlockingQueue<Object> commonQueue = new ArrayBlockingQueue<>(20);
 
         // 2. Initialize the Producer Runnable
         Runnable producerRunnable = () -> {
@@ -35,9 +35,9 @@ public class ProducerConsumerImpl {
                     // Waits for 1 second to produce an object every time
                     Thread.sleep(1000);
                     Object justProduced = new Object();
-                    myQueue.put(justProduced);
+                    commonQueue.put(justProduced);
                     LoggerUtility.logInfo("PRODUCER: produced a resource and the queue size now is "
-                                         + myQueue.size());
+                                         + commonQueue.size());
                 }
             } catch (InterruptedException exception) {
 
@@ -52,10 +52,10 @@ public class ProducerConsumerImpl {
 
                 while (!Thread.currentThread().isInterrupted()) {
 
-                    Object obj = myQueue.take();
+                    Object obj = commonQueue.take();
                     LoggerUtility.logInfo(
                             "CONSUMER: consumed a resource(" + obj + ") and the queue size now is "
-                             + myQueue.size());
+                             + commonQueue.size());
                     Thread.sleep(100);
                 }
             } catch (InterruptedException exception) {

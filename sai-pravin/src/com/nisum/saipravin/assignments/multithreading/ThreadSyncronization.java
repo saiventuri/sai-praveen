@@ -23,10 +23,10 @@ public class ThreadSyncronization implements Runnable {
      */
     public static void main(String[] args) throws InterruptedException {
 
-        ThreadSyncronization obj = new ThreadSyncronization();
+        ThreadSyncronization object = new ThreadSyncronization();
 
         // 1. Demonstrating Synchronized Method
-        Runnable runnable = () -> obj.printNumbers(10);
+        Runnable runnable = () -> object.printNumbers(10);
 
         // Creating the executor service for running threads using runnables having the
         // synchronized method
@@ -43,8 +43,8 @@ public class ThreadSyncronization implements Runnable {
         // The two threads will not interfere while incrementing the counter due to
         // synchronized block
 
-        Thread thread3 = new Thread(obj);
-        Thread thread4 = new Thread(obj);
+        Thread thread3 = new Thread(object);
+        Thread thread4 = new Thread(object);
 
         thread3.start();
         thread4.start();
